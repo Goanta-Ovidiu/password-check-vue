@@ -31,7 +31,7 @@ Vue.createApp({
     samePassword() {
       return this.passwordOne === this.passwordTwo && this.passwordOne !== "";
     },
-    alLeast10Char() {
+    atLeast10Char() {
       return this.passwordOne.length > 10;
     },
   },
