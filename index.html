@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Check</title>
+  </head>
+  <body>
+    <h1>Password Check</h1>
+    <div id="app">
+      <input :type="passwordType" v-model="passwordOne" /><br />
+      <input :type="passwordType" v-model="passwordTwo" /><br />
+      <button @click="changeType">{{button}}</button>
+      <ul>
+        <li>
+          Contain number
+          <span V-if="containNumber">✅</span>
+          <span v-else>❌</span>
+        </li>
+        <li>
+          Contain uppercase
+          <span V-if="containUppercase">✅</span>
+          <span v-else>❌</span>
+        </li>
+        <li>
+          Contain lowercase
+          <span V-if="containLowercase">✅</span>
+          <span v-else>❌</span>
+        </li>
+        <li>
+          Same password
+          <span V-if="samePassword">✅</span>
+          <span v-else>❌</span>
+        </li>
+        <li>
+          10 Character
+          <span V-if="alLeast10Char">✅</span>
+          <span v-else>❌</span>
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3.0.0"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
